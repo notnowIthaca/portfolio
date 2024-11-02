@@ -117,13 +117,24 @@ color:#c32c2c; target="_blank" title="DeviantArt">
 <i class="fa fa-deviantart"></i> </span>
 </a></li>	
     {% endif %}
-                    {% if site.github_username %}
-                <li>
-   <a href="https://github.com/{{ site.github_username }}" style="
-color:#dddddd; target="_blank" title="Github">
-              <i class="fa fa-github"></i>
-                     </span>
-                   {% endif %}
+
+{% if site.github_username %}
+<li>
+  <a href="https://github.com/{{ site.github_username }}" style="
+    color:#dddddd; target="_blank" title="Github">
+    <i class="fa fa-github"></i>
+  </span>
+{% endif %}
+
+{% if site.sketchfab_username %}
+<li>
+    <a href="https://sketchfab.com/{{ site.sketchfab_username }}"> style="color:#dddddd" target="_blank" title="Github">
+    <i class="fa fa-sketchfab"></i>
+    </span>
+{% endif %}
+
+
+
 <li>
     <a href="mailto:{{ site.email }}" style="
 color:#dddddd; target="_blank" title="Email">
