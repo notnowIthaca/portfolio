@@ -66,6 +66,22 @@
                         </a>
                     </li>
                     {% endif %}
+                    
+                    {% if site.sketchfab_username %}
+                    <li>
+                        <a href="https://github.com/{{ site.sketchfab_username }}" data-toggle="tooltip" title="Sketchfab">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-sketchfab fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {% endif %}
+
+
+
+
+
             <li>
     <a href="mailto:{{ site.email }}" data-toggle="tooltip" target="_blank" title="Email">
                        <span class="fa-stack fa-lg">
