@@ -1,5 +1,5 @@
 # Site settings
-title: Portfolio # PHOTORAMA
+title: Portfolio
 email: ""
 description: # "Photo Journal"
 url: "https://notnowIthaca.github.io"
@@ -9,8 +9,8 @@ zhihu_username: "acnestis"
 facebook_username: ""
 twitter_username: ""
 instagram_username: ""
-github_username:  ""
-deviantart_username: ""
+github_username:  "notnowIthaca"
+deviantart_username: "2amz"
 flickr_username: ""
 discus_shortname: ""
 share: true
