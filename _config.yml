@@ -35,9 +35,20 @@ comments :
 
 # Internal nav
 nav:
+  - TA: "/gallery/TA/"
+  - 3D: "/gallery/Modeling/"
+  - 2D: "/gallery/Painting/"
   - GALLERY: "https://notnowIthaca.github.io/portfolio/gallery/"  
   - JOURNAL: "https://notnowIthaca.github.io/portfolio/journal/"
   - ABOUT: "https://notnowIthaca.github.io/portfolio/about/"
+  - CONTACT: "https://notnowIthaca.github.io/portfolio/contact/"
+
+
+# navi:
+#   - name: 2D
+#     link: "/gallery/Painting/"
+
+
 
 # All translation keys
 translations:

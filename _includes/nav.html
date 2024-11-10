@@ -1,5 +1,19 @@
 <!-- Navigation -->
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top" style="margin-right:1em; z-index: 1;">
+    <!-- <a href="/portfolio/aboutme">AboutMe</a> -->
+
+    <!-- <a href="/portfolio/aboutme" 
+      {% if page.url == "/portfolio/aboutme" %}style="color: red;"{% endif %}>
+      About
+    </a> -->
+
+<!-- {% for item in site.navi %}
+  <a href="{{ site.url }}{{ site.baseurl }}{{ item.link }}">
+    {{ item.name }}
+  </a>
+{% endfor %} -->
+    
+
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
@@ -16,9 +30,9 @@
           {% for nav_item in nav_hash %}
             {% assign lowercase_nav_item = nav_item[0] | downcase %}
             {% if page.active == lowercase_nav_item %}
-              <li class="active"><a href="{{ nav_item[1] }}">{{ nav_item[0] }}</a></li>
+              <li class="active"><a href="{{ site.url }}{{ site.baseurl }}{{ nav_item[1] }}">{{ nav_item[0] }}</a></li>
             {% else %}
-              <li><a href="{{ nav_item[1] }}">{{ nav_item[0] }}</a></li>
+              <li><a href="{{ site.url }}{{ site.baseurl }}{{ nav_item[1] }}">{{ nav_item[0] }}</a></li>
             {% endif %}
           {% endfor %}
         {% endfor %}
