@@ -1,0 +1,106 @@
+---
+layout: page
+title: "Happy New Year"
+description: "Greeting Cards for Every Year"
+active: annual #对应_config.yml中的nav
+header-img: "/gallery/Modeling/unarchived/A-Blue-Grey-Room.png"
+<!-- y-percent: 77% -->
+
+albums:
+ - section-title: ""
+   path: '/gallery/NewYearCard'
+
+images_path: '/gallery/NewYearCard'
+
+---
+
+
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+</head>
+
+    <body>
+ 
+	<section id="content" role="main">
+		<div class="wrapper">
+	<br><br>
+
+<!-- {% for album in page.albums %} -->
+<!-- <h2>{{album.section-title}}</h2> -->
+<!-- Gallery __-->
+<div class="gallery masonry-gallery">
+{% assign images = site.static_files | where_exp: "file","file.path contains page.images_path " %}
+{% for image in images%}
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+
+{% if image.extname == ".mp4" %}
+<video src="{{ site.url }}{{ site.baseurl }}{{ image.path }}" autoplay loop controls style="width: 100%;"></video> 
+{% else %}
+<a href="{{ site.url }}{{ site.baseurl }}{{ image.path }}" class="popup"  title="{{ image.basename }}" data-caption="© acnestis">
+<img src="{{ site.url }}{{ site.baseurl }}{{ image.path }}"></a>
+{% endif %}
+
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary" id="{{ image.caption }}">
+							<h3>{{image.basename}}</h3>
+							<p>© acnestis</p>
+						</div>
+					</figcaption>
+				</figure>
+				
+
+{% endfor %}
+</div>
+{% endfor %}
+
+
+		</div><!-- END .wrapper -->
+	</section>
+
+<!-- jQuery -->    
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- include image popups -->
+<script src="{{ site.baseurl }}/js/jquery.magnific-popup.js"></script>
+
+<script type="text/javascript">
+      $(document).ready(function($) {
+        $('a.popup').magnificPopup({
+         type: 'image',
+	  gallery:{
+         enabled:true,
+         navigateByImgClick: true,
+         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+       },
+image: {
+      titleSrc: function(item) {
+              return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+            }
+        }
+          // other options
+      });
+});
+    </script>
+
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+    
+</body></html>
+
+

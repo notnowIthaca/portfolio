@@ -14,15 +14,11 @@ albums:
    path: '/gallery/Painting/GraphicDesign'
  - section-title: "Practices"
    path: '/gallery/Painting/Practice'
+ - section-title: "Animation"
+   path: '/gallery/Painting/Animation'
 
 images1:
  - image_path: /gallery/archive/g01/bg1.jpg
-   caption: IMAGE TITLE
-   copyright: © photorama
- - image_path: /gallery/archive/g01/bg2.jpg
-   caption: IMAGE TITLE
-   copyright: © photorama
- - image_path: /gallery/archive/g01/bg3.jpg
    caption: IMAGE TITLE
    copyright: © photorama
 ---
@@ -47,8 +43,12 @@ images1:
 				<figure class="gallery-item">
 					<header class='gallery-icon'>
 
+{% if image.extname == ".mp4" %}
+<video src="{{ site.url }}{{ site.baseurl }}{{ image.path }}" autoplay loop controls style="width: 100%;"></video> 
+{% else %}
 <a href="{{ site.url }}{{ site.baseurl }}{{ image.path }}" class="popup"  title="{{ image.basename }}" data-caption="© acnestis">
 <img src="{{ site.url }}{{ site.baseurl }}{{ image.path }}"></a>
+{% endif %}
 						
 					</header>	
 					<figcaption class='gallery-caption'>

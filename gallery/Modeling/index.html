@@ -3,25 +3,19 @@ layout: page
 title: "Modeling"
 description: "3D Practices, Illustrations"
 active: 3d #对应_config.yml中的nav
-header-img: "/gallery/Modeling/unarchived/A-Blue-Grey-Room.png"
+header-img: "/gallery/Modeling/Rendering/A-Blue-Grey-Room.png"
 y-percent: 77%
 
 albums:
+ - section-title: "Rendering"
+   path: '/gallery/Modeling/Rendering'
+ - section-title: "Animation"
+   path: '/gallery/Modeling/Animation'
  - section-title: "Practices"
    path: '/gallery/Modeling/unarchived'
- - section-title: "Avatars"
-   path: '/gallery/Modeling/Avatar'
- - section-title: "Graphic Design"
-   path: '/gallery/Modeling/GraphicDesign'
 
 images1:
  - image_path: /gallery/archive/g01/bg1.jpg
-   caption: IMAGE TITLE
-   copyright: © photorama
- - image_path: /gallery/archive/g01/bg2.jpg
-   caption: IMAGE TITLE
-   copyright: © photorama
- - image_path: /gallery/archive/g01/bg3.jpg
    caption: IMAGE TITLE
    copyright: © photorama
 ---
@@ -46,12 +40,12 @@ images1:
 				<figure class="gallery-item">
 					<header class='gallery-icon'>
 
-<!-- {% if image.extname == ".mp4" %} -->
+{% if image.extname == ".mp4" %}
 <video src="{{ site.url }}{{ site.baseurl }}{{ image.path }}" autoplay loop controls style="width: 100%;"></video> 
-<!-- {% else %}
+{% else %}
 <a href="{{ site.url }}{{ site.baseurl }}{{ image.path }}" class="popup"  title="{{ image.basename }}" data-caption="© acnestis">
 <img src="{{ site.url }}{{ site.baseurl }}{{ image.path }}"></a>
-{% endif %} -->
+{% endif %}
 
 					</header>	
 					<figcaption class='gallery-caption'>

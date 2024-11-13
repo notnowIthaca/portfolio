@@ -38,10 +38,10 @@ nav:
   - TA: "/gallery/TA/"
   - 3D: "/gallery/Modeling/"
   - 2D: "/gallery/Painting/"
-  - GALLERY: "/gallery/"  
-  - JOURNAL: "/journal/"
+  - ANNUAL: "/gallery/NewYearCard/"
+  # - GALLERY: "/gallery/"  
+  # - JOURNAL: "/journal/"
   - ABOUT: "/about/"
-  # - CONTACT: "https://notnowIthaca.github.io/portfolio/contact/"
 
 
 # navi:
