@@ -38,10 +38,10 @@ nav:
   - TA: "/gallery/TA/"
   - 3D: "/gallery/Modeling/"
   - 2D: "/gallery/Painting/"
-  - GALLERY: "https://notnowIthaca.github.io/portfolio/gallery/"  
-  - JOURNAL: "https://notnowIthaca.github.io/portfolio/journal/"
-  - ABOUT: "https://notnowIthaca.github.io/portfolio/about/"
-  - CONTACT: "https://notnowIthaca.github.io/portfolio/contact/"
+  - GALLERY: "/gallery/"  
+  - JOURNAL: "/journal/"
+  - ABOUT: "/about/"
+  # - CONTACT: "https://notnowIthaca.github.io/portfolio/contact/"
 
 
 # navi:
@@ -84,3 +84,10 @@ sitemap:
         - "/writing/"
     change_frequency_name: "change_frequency"
     priority_name: "priority"
+
+
+# defaults:
+#   - scope:
+#       path: "gallery/Painting/img2"
+#     values:
+#       image: true
