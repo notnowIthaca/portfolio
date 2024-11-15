@@ -5,7 +5,8 @@ layout: default
 <!-- Page Header -->
 <header class="intro-header" 
     style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}') ;
-           background-position: 50% {% if page.y-percent %}{{ page.y-percent }}{% else %} 50% {% endif %} ;
+           background-position: {% if page.bgPosition %}{{ page.bgPosition }}{% else %} 50% 50% {% endif %} ;
+           background-size: {% if page.bgSize %}{{ page.bgSize }}{% else %} cover {% endif %} ;
            background-color: black ; ">
     <div class="container">
         <div class="row">
